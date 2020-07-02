@@ -23,7 +23,7 @@ end)
 
 -- Main Handler
 Player.Character.HumanoidRootPart.ChildAdded:connect(function(kid)
-	if kid:IsA("BodyVelocity") and Enabled == true then
+	if kid:IsA("BodyVelocity") and Enabled then
         game.Debris:AddItem(kid,0)
         print("Blocked: " .. kid.name)
 	end
